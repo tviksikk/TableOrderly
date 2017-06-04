@@ -34,6 +34,23 @@ public:
 
 		return os;
 	}
+
+
+	void fillTable()
+	{
+		int random;
+		std::string tmp;
+		for (int i = 0;i<datamaxcount; i++)
+		{
+			random = rand() % 7 + 3;
+			tmp.clear();
+			for (int i = 0; i < random; i++)
+				tmp += rand()%255;
+			add(random, tmp);
+		}
+	}
+
+
 	int Search_Binary(int left, int right, int key)
 	{
 		int midd = 0;
